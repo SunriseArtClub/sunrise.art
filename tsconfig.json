@@ -1,0 +1,8 @@
+{
+    "references": [
+        { "path": "packages/sunrise-contracts" },
+        { "path": "packages/sunrise-sdk" },
+        { "path": "packages/sunrise-subgraph" },
+        { "path": "packages/sunrise-webapp" },
+    ]
+}

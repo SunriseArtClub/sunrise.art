@@ -1,0 +1,16 @@
+.bidHistoryWrapper {
+  display: flex;
+}
+.bidHistory {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  color: var(--brand-white);
+  font-weight: normal;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bidHistory:hover {
+  color: var(--brand-black);
+  text-decoration: none;
+}

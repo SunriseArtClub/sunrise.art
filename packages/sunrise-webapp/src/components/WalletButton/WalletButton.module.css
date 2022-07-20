@@ -1,0 +1,24 @@
+.walletButton {
+  border: none;
+  margin: 5px;
+  padding: 5px 20px;
+  border-radius: var(--border-radius);
+  background-color: rgba(211, 211, 211, 0.664);
+  color: var(--brand-black);
+  border: none;
+  text-transform: uppercase;
+}
+.walletButton img {
+  margin-right: 10px;
+  border-radius: var(--border-radius);
+}
+.walletButton:hover,
+.walletButton:active,
+.walletButton:focus,
+.walletButton:disabled {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: lightgray !important;
+  color: var(--brand-dark-green);
+  color: white;
+}

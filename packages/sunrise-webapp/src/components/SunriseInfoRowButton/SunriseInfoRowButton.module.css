@@ -1,0 +1,36 @@
+.sunriseButton {
+  height: 40px;
+  background-color: #e9ebf3;
+  border-radius: var(--border-radius);
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.sunriseButton:hover {
+  text-decoration: none;
+  background-color: white;
+}
+
+.sunriseButton:active {
+  color: black;
+}
+
+.sunriseButtonContents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttonIcon {
+  margin-right: 5px;
+}

@@ -1,0 +1,33 @@
+.sunriseTitle {
+  color: black;
+}
+
+.sunriseTitle a:link {
+  color: black;
+}
+
+.sunriseTitle a:visited {
+  color: black;
+}
+
+.sunriseTitle a:hover {
+  color: black;
+}
+
+.sunriseTitle:active {
+  color: black;
+}
+
+.wrapper {
+  display: inline-block;
+}
+
+.wrapper h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 900px) {
+  .wrapper h1 {
+    font-size: 3rem;
+  }
+}

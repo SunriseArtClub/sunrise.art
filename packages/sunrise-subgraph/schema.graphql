@@ -1,0 +1,79 @@
+type Sunrise @entity {
+  "The Sunrise's ERC721 token id"
+  id: ID!
+
+  "The owner of the Sunrise"
+  owner: Account!
+}
+
+type Bid @entity {
+  "Bid transaction hash"
+  id: ID!
+
+  "The Sunrise being bid on"
+  sunrise: Sunrise!
+
+  "Bid amount"
+  amount: BigInt!
+
+  "Bidder account"
+  bidder: Account
+
+  "Block number of the bid"
+  blockNumber: BigInt!
+
+  "Index of transaction within block"
+  txIndex: BigInt!
+
+  "The auction being bid in"
+  auction: Auction!
+
+  "The timestamp of the block the bid is in"
+  blockTimestamp: BigInt!
+}
+
+type Auction @entity {
+  "The Sunrise's ERC721 token id"
+  id: ID!
+
+  "The Sunrise"
+  sunrise: Sunrise!
+
+  "The current highest bid amount"
+  amount: BigInt!
+
+  "The time that the auction started"
+  startTime: BigInt!
+
+  "The time that the auction is scheduled to end"
+  endTime: BigInt!
+
+  "The account with the current highest bid"
+  bidder: Account
+
+  "Whether or not the auction has been settled"
+  settled: Boolean!
+
+  "The auction bids"
+  bids: [Bid!]! @derivedFrom(field: "auction")
+}
+
+type Account @entity {
+  "An Account is any address that holds any amount of Sunrises, the id used is the blockchain address."
+  id: ID!
+
+  "Sunrise balance of this address expressed in the smallest unit of the Sunrises ERC721 Token"
+  tokenBalanceRaw: BigInt!
+
+  "Sunrise balance of this address expressed as a BigInt normalized value for the Sunrises ERC721 Token"
+  tokenBalance: BigInt!
+
+  "Total amount of Sunrises ever held by this address expressed in the smallest unit of the Sunrises ERC721 Token"
+  totalTokensHeldRaw: BigInt!
+
+  "Total amount of Sunrises ever held by this address expressed as a BigInt normalized value for the Sunrises ERC721 Token"
+  totalTokensHeld: BigInt!
+
+  "The Sunrises owned by this account"
+  sunrises: [Sunrise!]!
+}

@@ -1,0 +1,35 @@
+node_modules
+parts.html
+
+#Hardhat files
+cache
+artifacts
+typechain/*.js
+typechain/*.ts
+!typechain/SunriseTokenFactory.ts
+!typechain/SunriseAuctionHouseFactory.ts
+!typechain/SunriseDescriptorFactory.ts
+!typechain/SunriseSeederFactory.ts
+.openzeppelin
+
+# Script output
+logs
+scripts/sunrise_json
+
+# Coverage result files
+coverage/
+coverage.json
+
+abi/@openzeppelin
+abi/contracts/base
+abi/contracts/external
+abi/contracts/interfaces
+abi/contracts/proxies
+abi/contracts/test
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

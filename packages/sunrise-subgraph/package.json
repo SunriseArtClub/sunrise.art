@@ -1,0 +1,30 @@
+{
+  "name": "@sunrise/subgraph",
+  "version": "0.1.0",
+  "description": "A subgraph that indexes sunrise events",
+  "author": "Sunrise Art Club",
+  "homepage": "https://sunrise.art",
+  "license": "GPL-3.0",
+  "main": "build/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "scripts": {
+    "clean": "rimraf ./src/types ./build subgraph.yaml",
+    "codegen": "graph codegen --output-dir src/types/",
+    "deploy": "graph deploy --debug --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
+    "create-local": "graph create --debug --node http://0.0.0.0:8020/ --ipfs http://localhost:5001",
+    "deploy-local": "graph deploy --debug --node http://0.0.0.0:8020/ --ipfs http://localhost:5001",
+    "prepare:rinkeby": "mustache config/rinkeby.json subgraph.yaml.mustache > subgraph.yaml",
+    "prepare:mainnet": "mustache config/mainnet.json subgraph.yaml.mustache > subgraph.yaml",
+    "prepare:localhost": "mustache config/localhost.json subgraph.yaml.mustache > subgraph.yaml",
+    "deploy:rinkeby": "yarn clean && yarn prepare:rinkeby && yarn codegen && yarn deploy laurendorman/sunrise-art-rinkeby",
+    "deploy:mainnet": "yarn clean && yarn prepare:mainnet && yarn codegen && yarn deploy laurendorman/sunrise-art",
+    "deploy:localhost": "yarn clean && yarn prepare:localhost && yarn codegen && yarn create-local laurendorman/sunrise-art && yarn deploy-local laurendorman/sunrise-art"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "0.20.1",
+    "@graphprotocol/graph-ts": "0.20.0",
+    "mustache": "4.2.0"
+  }
+}

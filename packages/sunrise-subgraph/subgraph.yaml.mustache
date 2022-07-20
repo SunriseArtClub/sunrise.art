@@ -1,0 +1,61 @@
+specVersion: 0.0.3
+description: >-
+  Sunrise Art Club
+graft:
+  base: QmYD7yfnk6NMj6GTbakc6VjGJxMnhPVHUUPjgmVtqQFEg6
+  block: 14218836
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: SunriseAuctionHouse
+    network: {{network}}
+    source:
+      address: '{{sunriseAuctionHouseV2.address}}'
+      abi: SunriseAuctionHouse
+      startBlock: {{sunriseAuctionHouseV2.startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/sunrise-auction-house.ts
+      entities:
+        - Account
+        - Auction
+        - Bid
+        - Sunrise
+      abis:
+        - name: SunriseAuctionHouse
+          file: ../sunrise-contracts/abi/contracts/SunriseAuctionHouse.sol/SunriseAuctionHouse.json
+      eventHandlers:
+        - event: AuctionCreated(indexed uint256,uint256,uint256)
+          handler: handleAuctionCreated
+        - event: AuctionBid(indexed uint256,address,uint256,bool)
+          handler: handleAuctionBid
+        - event: AuctionExtended(indexed uint256,uint256)
+          handler: handleAuctionExtended
+        - event: AuctionSettled(indexed uint256,address,uint256)
+          handler: handleAuctionSettled
+  - kind: ethereum/contract
+    name: SunriseToken
+    network: {{network}}
+    source:
+      address: '{{sunriseToken.address}}'
+      abi: SunriseToken
+      startBlock: {{sunriseToken.startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/sunrise-erc-721.ts
+      entities:
+        - Sunrise
+        - Account
+      abis:
+        - name: SunriseToken
+          file: ../sunrise-contracts/abi/contracts/SunriseToken.sol/SunriseToken.json
+      eventHandlers:
+        - event: SunriseCreated(indexed uint256)
+          handler: handleSunriseCreated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer

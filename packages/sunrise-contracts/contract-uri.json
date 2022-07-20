@@ -1,0 +1,8 @@
+{
+  "name": "Sunrise",
+  "description": "Sunrise Art Club",
+  "image": "ipfs://bafybeigvs5oft4zcl4ppq2s5koahgf6tu3wahhaf4ctdtdvrj7gei6xfry/0",
+  "external_link": "https://sunrise.art",
+  "seller_fee_basis_points": 1000,
+  "fee_recipient": "0x0000000000000000000000000000000000000000"
+}

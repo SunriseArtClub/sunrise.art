@@ -1,0 +1,95 @@
+.bidWrapper {
+  margin: 1rem 0;
+}
+
+.bidBtn {
+  margin-left: 1rem !important;
+  border-radius: var(--border-radius) !important;
+  height: 3rem;
+  color: var(--brand-black);
+  border: transparent;
+  background-color: var(--brand-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 25%;
+}
+
+.bidBtn:hover,
+.bidBtn:active,
+.bidBtn:focus,
+.bidBtn:disabled {
+  color: var(--brand-black);
+  border: transparent;
+  background-color: var(--brand-white);
+  outline: none !important;
+  box-shadow: none !important;
+}
+.minBidCopy {
+  padding-top: 0;
+  font-size: small;
+  margin-left: 0.25rem;
+  margin-bottom: 0.3rem;
+}
+.bidInput {
+  width: 60%;
+  height: 3rem;
+  color: var(--brand-white);
+  border: var(--border) !important;
+  border-radius: var(--border-radius) !important;
+  background-color: var(--opacity);
+  font-weight: bold;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.bidInput:focus {
+  border: none !important;
+  border: var(--border) !important;
+  background-color: var(--opacity);
+  color: var(--brand-white);
+}
+.customPlaceholder {
+  position: absolute;
+  top: 23%;
+  left: 60%;
+  font-weight: bold;
+  color: var(--brand-white);
+  z-index: 3;
+}
+.bidBtnAuctionEnded,
+.bidBtnAuctionEnded:hover {
+  width: 100%;
+  height: 3rem;
+  color: var(--brand-black);
+  border: transparent;
+  background-color: var(--brand-white);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+}
+
+.bidInputAuctionEnded {
+  display: none;
+}
+
+.bidInput:focus {
+  outline: none;
+}
+
+/* REMOVE UP/DOWN ARROWS FROM INPUT */
+/* Chrome, Safari, Edge, Opera */
+.bidInput::-webkit-outer-spin-button,
+.bidInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.bidInput[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 992px) {
+  .customPlaceholder {
+    top: 18%;
+    left: 53%;
+  }
+}

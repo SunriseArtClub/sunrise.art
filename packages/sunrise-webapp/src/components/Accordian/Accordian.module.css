@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .faq {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .headline {
+    font-size: 2rem !important;
+    padding: 0 !important;
+  }
+  
+  .faq h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+  
+    width: 3px;
+    height: calc(100% - 10px);
+    max-height: 18px;
+    background-color: var(--brand-white);
+    transition: transform 450ms ease-in-out;
+  
+    transform: translateY(-50%);
+  }
+  
+  .faq h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+  
+    width: 3px;
+    height: calc(100% - 10px);
+    max-height: 18px;
+    background-color: var(--brand-white);
+  
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+    text-transform: none;
+    padding: 0 1rem;
+    line-height: 1.25;
+  }
+  
+  
+  .content a {
+    position: relative;
+    z-index: 50;
+    transition: opacity 300ms ease-out;
+  }
+
+  .content *:first-child {
+    padding-top: 1rem;
+  }
+
+  .content *:last-child {
+    margin-bottom: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  
+  .content a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+    height: 2px;
+    width: 0;
+    background: #000;
+    transition: width 300ms ease-out;
+  }
+  
+  .content a:hover::after {
+    width: 100%;
+  }
+  
+  .openFaq h2::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  .openFaq .content {
+    max-height: 50rem;
+  }
+  
+  .list p {
+    margin: 6px 0;
+  }
+  
+  @media (max-width: 900px) {
+
+    .openFaq .content {
+      max-height: 50rem;
+    }
+  
+    .faq h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .container {
+    width: 100%;
+    margin: 1rem auto 0;
+    color: var(--brand-white);
+  }
+  
+  .container h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1;
+  }
+  
+  .faq {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--opacity);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding: 1rem 0;
+  }
+
+  .content {
+    font-family: 'Inter';
+    width: 100%;
+    height: auto;
+  }

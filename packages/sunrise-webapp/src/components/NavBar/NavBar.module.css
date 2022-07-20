@@ -1,0 +1,85 @@
+.navBarBrand {
+  position: relative;
+  z-index: 2;
+}
+
+.navWrapper {
+  margin-top: 1rem !important;
+}
+
+.navToggle {
+  padding: 0 !important;
+}
+
+.navBarBrand img {
+  max-width: 20rem;
+  width: 100%;
+}
+
+/* connect button displays differently to default NavBarItems, thus the !importants */
+.connectBtn {
+  cursor: pointer;
+}
+.connectBtn:hover,
+.connectBtn:active,
+.connectBtn:focus {
+  cursor: pointer !important;
+}
+.connectBtn,
+.disconnectBtn {
+  cursor: pointer;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--opacity);
+  padding: 0.25rem 0.75rem !important;
+  margin-left: 1rem;
+}
+.disconnectBtn:hover,
+.disconnectBtn:active,
+.disconnectBtn:focus {
+  cursor: pointer !important;
+}
+
+.greenStatusCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #7fc59c;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.sunrisesNavLink,
+.sunrisesNavLink:active,
+.sunrisesNavLink:visited {
+  font-size: 20px !important;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  color: var(--brand-white) !important;
+}
+.sunrisesNavLink:hover {
+  opacity: 0.6;
+}
+
+.addressNavLink {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .navWrapper {
+    margin-top: 0 !important;
+  }
+  .navBarBrand img {
+    max-width: 15rem;
+  }
+  .connectBtn,
+  .disconnectBtn {
+    margin-left: 0;
+  }
+  .addressNavLink {
+    justify-content: center;
+  }
+}

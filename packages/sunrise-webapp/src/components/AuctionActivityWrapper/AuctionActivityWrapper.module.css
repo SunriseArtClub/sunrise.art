@@ -1,0 +1,8 @@
+.wrapper {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--brand-white);
+  margin-bottom: 1rem;
+}

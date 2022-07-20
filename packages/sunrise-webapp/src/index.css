@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'ClashDisplay-Medium', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::selection {
+  background: #ffe4ed; /* WebKit/Blink Browsers */
+  color: #053039;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #ffe4ed; /* Gecko Browsers */
+  color: #053039;
+  text-shadow: none;
+}
+
+@import './css/colors.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.countdownLanding {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff5a5;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingLogo {
+  max-width: 800px;
+  width: 100%;
+}
+
+.socialWrapper {
+  display: flex;
+}
+
+.socialIcons {
+  max-width: 48px;
+  margin: 0.25rem;
+  opacity: 0.6;
+}
+
+.timerWrapper {
+  background-color: #fff;
+  font-family: 'ARK-ES';
+  opacity: 0.6;
+  border-radius: var(--border-radius);
+  display: flex;
+  padding: 0.35rem 1.25rem 0;
+  border: var(--border-dark);
+  margin-top: 2rem;
+}
+
+.labelWrapper {
+  margin-bottom: 2rem;
+  font-size: 8px;
+  font-family: 'Inter';
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.labelWrapper span:not(:first-of-type) {
+  margin-left: 1.5rem;
+}

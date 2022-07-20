@@ -1,0 +1,144 @@
+.wrapper {
+  padding: 1rem 2rem;
+  color: var(--brand-white);
+  align-self: flex-start !important;
+}
+.informationRow {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.modalHeader {
+  border-bottom: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+.modalTitleWrapper {
+  color: var(--brand-black);
+}
+.modalTitleWrapper h1 {
+  font-size: xx-large;
+  margin-left: 2rem;
+}
+.modalHeader button {
+  align-self: flex-start;
+}
+.modalHeaderSunriseImgWrapper {
+  width: 150px;
+  height: 150px;
+}
+.currentBidCol {
+  border-right: var(--border);
+}
+.auctionTimerCol {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  .auctionTimerCol {
+    padding-left: 15px;
+  }
+
+  .currentBidCol {
+    border-width: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.infoToolTip {
+  position: relative;
+  cursor: pointer;
+}
+
+.infoToolTip:hover::after {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  z-index: 1000;
+}
+
+.infoToolTip::after {
+  content: 'Calculated based on 75% of auction winnings being distributed to the Sunrise Art Club. Average cost: 1 project = 5 ETH.';
+  position: absolute;
+  cursor: auto;
+
+  bottom: calc(100% + 4px);
+  left: 50%;
+
+  width: 230px;
+  padding: 10px 1rem;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+
+  background: var(--brand-white);
+  color: var(--brand-black);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+  transition: all 300ms ease-in-out;
+
+  transform: translate(-50%, 20%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.diatInfoToolTip {
+  position: relative;
+  cursor: pointer;
+}
+
+.diatInfoToolTip:hover::after {
+  transform: translate(30%, 0);
+  opacity: 1;
+  z-index: 1000;
+}
+
+.diatInfoToolTip::after {
+  content: 'The winner of this auction will receive their bid amount worth of DIAT at $25/token, multiplied by the reward multipler. All rewarded DIAT has a 24 month linear vesting schedule, and will be staked automatically when vested.';
+  position: absolute;
+  cursor: auto;
+
+  bottom: calc(100% + 4px);
+  right: 0;
+
+  width: 310px;
+  padding: 10px 1rem;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+
+  background: #a1f1df;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+  transition: all 300ms ease-in-out;
+
+  transform: translate(30%, 20%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.icon {
+  display: inline;
+  height: 38px;
+  margin: 0 4px 8px 0;
+}
+
+/* Fix Firefox navigation arrow alignment issues */
+@-moz-document url-prefix() {
+  .colAlignCenter {
+    display: flex;
+    align-items: center;
+  }
+}

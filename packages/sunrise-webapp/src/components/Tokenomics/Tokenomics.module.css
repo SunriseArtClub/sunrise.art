@@ -1,0 +1,708 @@
+.section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 0 2rem;
+  margin: 5rem auto 0;
+  max-width: 450px;
+
+  overflow: hidden;
+}
+
+.section h1 {
+  position: relative;
+  font-size: 2.25rem;
+  color: #053039;
+  font-weight: 700;
+
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  border-radius: var(--border-radius);
+  height: 3px;
+  width: calc(50% - 125px);
+  background: #5b6459;
+}
+
+.section h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  border-radius: var(--border-radius);
+  height: 3px;
+  width: calc(50% - 130px);
+  background: #5b6459;
+}
+
+.section > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  width: 100%;
+}
+
+.section > div > img {
+  height: 100%;
+  max-height: 150px;
+  width: auto;
+
+  margin: 0 auto;
+
+  opacity: 0;
+}
+
+.section > div > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #053039;
+  margin: 1rem 0 0;
+
+  margin-top: 2rem;
+
+  opacity: 0;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.25rem;
+  color: #000;
+  margin: 1rem 0 0;
+  padding: 0;
+
+  opacity: 0;
+}
+
+.centralImg {
+  display: none;
+}
+
+.exchangeImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exchangeImages > img {
+  width: 45%;
+}
+
+.exchangeCoins {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exchangeCoins > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-20px);
+}
+
+.exchangeCoins img {
+  width: 50px;
+}
+
+.exchangeCoins > img:first-of-type {
+  width: 90px;
+  transform: rotate(62deg);
+}
+
+.yellowBall {
+  width: 50px;
+  height: 50px;
+
+  background: rgb(245, 245, 0);
+  border-radius: 50%;
+}
+
+.exchangeCoins .wind {
+  position: relative;
+
+  width: 25px;
+  height: 25px;
+  border: 2px solid #7f7f7f;
+  border-top: none;
+  border-bottom: none;
+}
+
+.exchangeCoins .wind::after {
+  content: '';
+  width: 2px;
+  height: 25px;
+  background: #7f7f7f;
+
+  position: absolute;
+  bottom: 50%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.exchangeCoins > div:last-of-type .wind::after {
+  bottom: none;
+  top: 50%;
+}
+
+.contentFadeIn > img {
+  animation: fadeIn 500ms ease-in-out forwards;
+}
+
+.contentFadeIn > h2 {
+  animation: fadeIn 500ms 500ms ease-in-out forwards;
+}
+
+.contentFadeIn > p {
+  animation: fadeIn 500ms 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sunriseHeadline {
+  display: none;
+}
+
+.desktopImg {
+  display: none;
+}
+
+.coinsContainer * {
+  display: none;
+}
+
+.arrowsContainer img {
+  display: none;
+}
+
+.lineSectionOne {
+  display: none;
+}
+
+.lineSectionFive {
+  display: none;
+}
+
+.arrowSectionTwo {
+  display: none;
+}
+
+.arrowSectionFour {
+  display: none;
+}
+
+.shortArrowOne {
+  display: none;
+}
+
+.shortArrowTwo {
+  display: none;
+}
+
+.oceanWrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ocean {
+  width: 1150px;
+  height: auto;
+}
+
+@media (min-width: 1150px) {
+  .section {
+    height: 720px;
+    margin: 5rem auto 0;
+    padding: 0 5rem;
+    max-width: 1300px;
+  }
+
+  .section h1 {
+    font-size: 2.5rem;
+  }
+
+  .section h1::after {
+    width: calc(50% - 145px);
+  }
+
+  .section h1::before {
+    width: calc(50% - 145px);
+  }
+
+  .section > div {
+    margin: 0;
+  }
+
+  .section > div > img {
+    height: 50px;
+    margin: 0 auto 0 0;
+  }
+
+  .section > div > h2 {
+    font-size: 20px;
+    margin-top: 0.5rem;
+  }
+
+  .section > div > p {
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 0.5rem;
+  }
+
+  .oceanWrapper {
+    justify-content: center;
+  }
+
+  .mobileImg {
+    display: none;
+    max-width: 100%;
+  }
+
+  .desktopImg {
+    display: block;
+  }
+
+  .section h2 {
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  .centralImg {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 150px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .sunriseHeadline {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #576764;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, calc(-50% + 90px));
+  }
+
+  .exchangeImages {
+    display: none;
+  }
+
+  .sectionOne {
+    width: 100%;
+    max-width: 260px;
+
+    position: absolute;
+    top: 15%;
+    left: 10%;
+  }
+
+  .sectionTwo {
+    width: 100%;
+    max-width: 320px;
+
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+  }
+
+  .sectionThree {
+    width: 100%;
+    max-width: 320px;
+
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sectionThree > img {
+    margin-left: 1rem !important;
+  }
+
+  .sectionFour {
+    width: 100%;
+    max-width: 320px;
+
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+  }
+
+  .sectionFive {
+    width: 100%;
+    max-width: 320px;
+
+    position: absolute;
+    top: 15%;
+    left: 70%;
+  }
+
+  .lineSectionOne {
+    position: absolute;
+    display: block;
+
+    bottom: 50%;
+    right: 50%;
+    width: 13%;
+
+    opacity: 0;
+    transform: translate(-75px, -35px) scaleX(-1);
+  }
+
+  .lineSectionFive {
+    position: absolute;
+    display: block;
+
+    bottom: 50%;
+    left: 50%;
+    width: 13%;
+
+    opacity: 0;
+    transform: translate(75px, -35px);
+  }
+
+  .arrowSectionTwo {
+    position: absolute;
+    display: block;
+
+    top: 50%;
+    right: 50%;
+    width: 13%;
+
+    opacity: 0;
+    transform: translate(-75px, 35px) scaleY(-1);
+  }
+
+  .arrowSectionFour {
+    position: absolute;
+    display: block;
+
+    top: 50%;
+    left: 50%;
+    width: 13%;
+
+    opacity: 0;
+    transform: translate(75px, 35px);
+  }
+
+  .shortArrowOne {
+    position: absolute;
+    display: block;
+
+    bottom: 20%;
+    left: 10%;
+    width: 6%;
+
+    opacity: 0;
+    transform: translate(250px, 35px);
+  }
+
+  .shortArrowTwo {
+    position: absolute;
+    display: block;
+
+    bottom: 20%;
+    right: 10%;
+    width: 6%;
+
+    opacity: 0;
+    transform: translate(-275px, 30px) scaleY(-1);
+  }
+
+  /* coins */
+  .wind {
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+    border: 2px solid #8d8d8d;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .wind::after {
+    content: '';
+    width: 2px;
+    height: 15px;
+    background: #8d8d8d;
+
+    position: absolute;
+    top: 40%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .coinsContainer * {
+    display: block;
+  }
+
+  .coinsContainer > div > div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .coinsContainer img {
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
+    max-height: 30px;
+  }
+
+  .coinsSectionOne {
+    opacity: 0;
+  }
+
+  .coinsSectionOne > div:first-of-type {
+    top: 31%;
+    left: 36%;
+    width: 25px;
+    transform: rotate(-58deg);
+  }
+
+  .coinsSectionOne > div:first-of-type img {
+    transform: rotate(70deg);
+  }
+
+  .coinsSectionOne > div:last-of-type {
+    top: 42%;
+    left: 39%;
+    width: 25px;
+  }
+
+  .coinsSectionOne > div:last-of-type > img {
+    width: 50px;
+    max-width: 50px;
+    height: auto;
+    max-height: unset;
+  }
+
+  .coinsSectionTwo {
+    opacity: 0;
+  }
+
+  .coinsSectionTwo > div {
+    bottom: 36%;
+    left: 34%;
+    width: 25px;
+  }
+
+  .coinsSectionTwo > div img {
+    width: 50px;
+    max-width: 50px;
+    height: auto;
+    max-height: unset;
+  }
+
+  .coinsSectionThree {
+    opacity: 0;
+  }
+
+  .coinsSectionThree > div {
+    bottom: 39%;
+    right: 37%;
+    width: 25px;
+    transform: rotate(-60deg);
+  }
+
+  .coinsSectionThree > div img {
+    transform: rotate(85deg);
+  }
+
+  .coinsSectionFour {
+    opacity: 0;
+  }
+
+  .coinsSectionFour > div:first-of-type {
+    top: 37%;
+    right: 41%;
+    width: 25px;
+  }
+
+  .coinsSectionFour > div:first-of-type img {
+    width: 50px;
+    max-width: 50px;
+    height: auto;
+    max-height: unset;
+  }
+
+  .coinsSectionFour > div:last-of-type {
+    top: 36%;
+    right: 34%;
+    width: 25px;
+    transform: rotate(58deg);
+  }
+
+  .coinsSectionFour > div:last-of-type img {
+    transform: rotate(-100deg);
+  }
+
+  .ocean {
+    width: 100%;
+  }
+
+  /* Animation timing */
+
+  .contentFadeIn > div > img {
+    animation: fadeIn 300ms ease-in-out forwards;
+  }
+
+  .contentFadeIn > div > h2 {
+    animation: fadeIn 300ms ease-in-out forwards;
+  }
+
+  .contentFadeIn > div > p {
+    animation: fadeIn 300ms ease-in-out forwards;
+  }
+
+  /* one */
+
+  .contentFadeIn .sectionOne > img {
+    animation-delay: 300ms;
+  }
+
+  .contentFadeIn .sectionOne > h2 {
+    animation-delay: 400ms;
+  }
+
+  .contentFadeIn .sectionOne > p {
+    animation-delay: 700ms;
+  }
+
+  .contentFadeIn .lineSectionOne,
+  .contentFadeIn .coinsSectionOne {
+    animation: fadeIn 400ms ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .contentFadeIn .centralImg {
+    animation: fadeIn 400ms 1400ms ease-in-out forwards;
+  }
+
+  .contentFadeIn .sunriseHeadline {
+    animation: fadeIn 400ms 1400ms ease-in-out forwards;
+  }
+
+  .contentFadeIn .arrowSectionTwo,
+  .contentFadeIn .coinsSectionTwo {
+    animation: fadeIn 400ms 1800ms ease-in-out forwards;
+  }
+
+  /* two */
+
+  .contentFadeIn .sectionTwo > img {
+    animation-delay: 2.4s;
+  }
+
+  .contentFadeIn .sectionTwo > h2 {
+    animation-delay: 2.5s;
+  }
+
+  .contentFadeIn .sectionTwo > p {
+    animation-delay: 2.8s;
+  }
+
+  .contentFadeIn .shortArrowOne {
+    animation: fadeIn 300ms ease-in-out forwards;
+    animation-delay: 3.1s;
+  }
+
+  /* three */
+
+  .contentFadeIn .sectionThree > img {
+    animation-delay: 3.3s;
+  }
+
+  .contentFadeIn .sectionThree > h2 {
+    animation-delay: 3.4s;
+  }
+
+  .contentFadeIn .sectionThree > p {
+    animation-delay: 3.7s;
+  }
+
+  .contentFadeIn .shortArrowTwo {
+    animation: fadeIn 300ms 4s ease-in-out forwards;
+  }
+
+  /* four */
+
+  .contentFadeIn .sectionFour > img {
+    animation-delay: 4.3s;
+  }
+
+  .contentFadeIn .sectionFour > h2 {
+    animation-delay: 4.4s;
+  }
+
+  .contentFadeIn .sectionFour > p {
+    animation-delay: 4.7s;
+  }
+
+  .contentFadeIn .arrowSectionFour,
+  .contentFadeIn .coinsSectionThree {
+    animation: fadeIn 400ms ease-in-out forwards;
+    animation-delay: 5.1s;
+  }
+
+  .contentFadeIn .lineSectionFive,
+  .contentFadeIn .coinsSectionFour {
+    animation: fadeIn 400ms 5.5s ease-in-out forwards;
+  }
+
+  /* five */
+
+  .contentFadeIn .sectionFive > img {
+    animation-delay: 5.9s;
+  }
+
+  .contentFadeIn .sectionFive > h2 {
+    animation-delay: 6s;
+  }
+
+  .contentFadeIn .sectionFive > p {
+    animation-delay: 6.3s;
+  }
+}

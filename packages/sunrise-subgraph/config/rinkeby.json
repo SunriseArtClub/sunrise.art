@@ -1,0 +1,11 @@
+{
+  "network": "rinkeby",
+  "sunriseToken": {
+    "address": "0x6482B983c5e89750E4aB7817CE6DB58f50c38A4C",
+    "startBlock": 9927415
+  },
+  "sunriseAuctionHouse": {
+    "address": "0xf2c75232cf06a2e687b8dfe2085bd1b8df5b2540",
+    "startBlock": 9927420
+  }
+}

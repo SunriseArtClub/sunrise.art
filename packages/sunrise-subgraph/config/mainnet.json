@@ -1,0 +1,15 @@
+{
+  "network": "mainnet",
+  "sunriseToken": {
+    "address": "0x400b77c8b985bbfba6189580af3c6e4074e71ed5",
+    "startBlock": 13932187
+  },
+  "sunriseAuctionHouseV2": {
+    "address": "0x330AB637D68808896E1E3be2D9fC85152C6bf35d",
+    "startBlock": 14055495
+  },
+  "sunriseAuctionHouseV1": {
+    "address": "0xac14852D93873b2919652c851a56E19b3A697cD6",
+    "startBlock": 13932191
+  }
+}

@@ -1,0 +1,24 @@
+.sunriseHolderEtherscanLink {
+  font-family: 'ARK-ES';
+  color: '#4965F0';
+  margin-left: 5px;
+}
+
+.sunriseHolderInfoContainer {
+  display: inline;
+  width: 350px;
+  height: 35px;
+}
+
+.linkIconSpan {
+  margin-left: 5px;
+}
+
+.linkIcon {
+  margin-bottom: 5px;
+}
+
+.heartIcon {
+  margin-bottom: 4px;
+  margin-right: 7px;
+}

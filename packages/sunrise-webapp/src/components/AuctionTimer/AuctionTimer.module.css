@@ -1,0 +1,21 @@
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.timerWrapper {
+  display: flex;
+}
+
+.timerSection {
+  margin-right: 0.5rem;
+  font-family: 'ARK-ES';
+}
+
+.small {
+  padding-left: 0.1rem;
+  font-size: 0.65em;
+}
+
+.timeSubtitle {
+  font-size: medium;
+}

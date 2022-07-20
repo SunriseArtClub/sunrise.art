@@ -1,0 +1,76 @@
+.sunriseWrapper {
+  align-self: flex-end;
+  width: 100%;
+}
+.sunriseContentCol {
+  display: flex;
+}
+
+.auctionActivityCol {
+  padding-top: 4rem;
+  align-self: start !important; /* maintains auction arrow buttons fixed from auction to auction  */
+}
+
+.auctionStartEnd,
+.auctionProperties {
+  background-color: var(--opacity);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: flex;
+  color: var(--brand-white);
+}
+
+.auctionStartEnd {
+  margin: 1rem;
+}
+
+.auctionProperties {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.propertiesIcon {
+  width: 48px;
+}
+
+.propertiesList {
+  padding-left: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.propertiesList li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.propertiesList span {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: 0.5rem;
+}
+
+.propertiesList strong {
+  font-family: 'ARK-ES';
+}
+
+.propertiesList li:not(:last-of-type) {
+  border-bottom: var(--border);
+}
+
+@media (max-width: 992px) {
+  .auctionActivityCol {
+    /* background-color: white; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.auctionPlaceholder h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
