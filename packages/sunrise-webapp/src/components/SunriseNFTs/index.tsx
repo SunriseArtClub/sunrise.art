@@ -36,18 +36,18 @@ const SunriseNFTs = () => {
     }
   `;
 
-  const { loading, error, data, fetchMore } = useQuery(SUNRISE_FUND_QUERY, {
+  const { loading, error, data } = useQuery(SUNRISE_FUND_QUERY, {
     variables: { limit: 8 },
     context: { clientName: 'zora' },
   });
 
-  const next = () => {
-    fetchMore({
-      variables: {
-        after: data?.tokens?.pageInfo?.endCursor,
-      },
-    });
-  };
+  // const next = () => {
+  //   fetchMore({
+  //     variables: {
+  //       after: data?.tokens?.pageInfo?.endCursor,
+  //     },
+  //   });
+  // };
 
   if (loading)
     return (
