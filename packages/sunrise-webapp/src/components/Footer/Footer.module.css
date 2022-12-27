@@ -1,3 +1,7 @@
+footer {
+  text-transform: uppercase;
+}
+
 .footerSignature {
   position: relative;
   font-size: 1rem;

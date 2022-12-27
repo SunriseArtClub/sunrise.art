@@ -8,9 +8,9 @@ import './css/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AlertModal from './components/Modal';
 import NetworkAlert from './components/NetworkAlert';
-import AuctionPage from './pages/Auction';
 import NotFoundPage from './pages/NotFound';
 import { CHAIN_ID } from './config';
+import HomePage from './pages/Home';
 
 function App() {
   const { account, chainId } = useEthers();
@@ -34,12 +34,12 @@ function App() {
       )}
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={AuctionPage} />
-          <Route
+          <Route exact path="/" component={HomePage} />
+          {/* <Route
             exact
             path="/sunrise/:id"
             render={props => <AuctionPage initialAuctionId={Number(props.match.params.id)} />}
-          />
+          /> */}
           <Route component={NotFoundPage} />
         </Switch>
       </BrowserRouter>

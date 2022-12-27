@@ -1,66 +1,66 @@
 import { useAppSelector } from '../../hooks';
-import ShortAddress from '../ShortAddress';
+// import ShortAddress from '../ShortAddress';
 import classes from './NavBar.module.css';
 import logo from '../../assets/logo.png';
 import { useState } from 'react';
-import { useEtherBalance, useEthers } from '@usedapp/core';
+import { useEtherBalance } from '@usedapp/core';
 import WalletConnectModal from '../WalletConnectModal';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, Container } from 'react-bootstrap';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import { utils } from 'ethers';
 import { buildEtherscanAddressLink } from '../../utils/etherscan';
 import { ExternalURL, externalURL } from '../../utils/externalURL';
 
 const NavBar = () => {
   const activeAccount = useAppSelector(state => state.account?.activeAccount);
-  const { deactivate } = useEthers();
+  // const { deactivate } = useEthers();
 
   const treasuryBalance = useEtherBalance('0x2EfDC5AEC299BF959cb0f0D8fF42268686731614');
   const fundEtherscanLink = buildEtherscanAddressLink('0x2EfDC5AEC299BF959cb0f0D8fF42268686731614');
 
   const [showConnectModal, setShowConnectModal] = useState(false);
 
-  const showModalHandler = () => {
-    setShowConnectModal(true);
-  };
+  // const showModalHandler = () => {
+  //   setShowConnectModal(true);
+  // };
   const hideModalHandler = () => {
     setShowConnectModal(false);
   };
 
-  const connectedContent = (
-    <>
-      <Nav.Item>
-        <Nav.Link className={clsx(classes.sunrisesNavLink, classes.addressNavLink)} disabled>
-          <span className={classes.greenStatusCircle} />
-          <span>{activeAccount && <ShortAddress address={activeAccount} avatar={true} />}</span>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          className={clsx(classes.sunrisesNavLink, classes.disconnectBtn)}
-          onClick={() => {
-            setShowConnectModal(false);
-            deactivate();
-            setShowConnectModal(false);
-          }}
-        >
-          Disconnect
-        </Nav.Link>
-      </Nav.Item>
-    </>
-  );
+  // const connectedContent = (
+  //   <>
+  //     <Nav.Item>
+  //       <Nav.Link className={clsx(classes.sunrisesNavLink, classes.addressNavLink)} disabled>
+  //         <span className={classes.greenStatusCircle} />
+  //         <span>{activeAccount && <ShortAddress address={activeAccount} avatar={true} />}</span>
+  //       </Nav.Link>
+  //     </Nav.Item>
+  //     <Nav.Item>
+  //       <Nav.Link
+  //         className={clsx(classes.sunrisesNavLink, classes.disconnectBtn)}
+  //         onClick={() => {
+  //           setShowConnectModal(false);
+  //           deactivate();
+  //           setShowConnectModal(false);
+  //         }}
+  //       >
+  //         Disconnect
+  //       </Nav.Link>
+  //     </Nav.Item>
+  //   </>
+  // );
 
-  const disconnectedContent = (
-    <>
-      <Nav.Link
-        className={clsx(classes.sunrisesNavLink, classes.connectBtn)}
-        onClick={showModalHandler}
-      >
-        Connect Wallet
-      </Nav.Link>
-    </>
-  );
+  // const disconnectedContent = (
+  //   <>
+  //     <Nav.Link
+  //       className={clsx(classes.sunrisesNavLink, classes.connectBtn)}
+  //       onClick={showModalHandler}
+  //     >
+  //       Connect Wallet
+  //     </Nav.Link>
+  //   </>
+  // );
 
   return (
     <>
@@ -94,7 +94,7 @@ const NavBar = () => {
             >
               Info
             </Nav.Link>
-            {activeAccount ? connectedContent : disconnectedContent}
+            {/* {activeAccount ? connectedContent : disconnectedContent} */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

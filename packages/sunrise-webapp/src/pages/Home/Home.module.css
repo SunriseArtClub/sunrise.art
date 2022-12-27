@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(190.52deg, #414F82 0%, #B65F74 100%);
+}
+
+.wrapperPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
