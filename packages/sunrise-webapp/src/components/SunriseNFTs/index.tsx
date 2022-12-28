@@ -94,7 +94,10 @@ const SunriseNFTs = () => {
 
   if (loading)
     return (
-      <Container className={classes.container}>
+      <Container
+        className={classes.container}
+        style={{ display: 'flex', marginTop: '6rem', justifyContent: 'center' }}
+      >
         <Spinner animation="border" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
@@ -107,91 +110,108 @@ const SunriseNFTs = () => {
       {data && (
         <>
           <Slider ref={slider} {...settings}>
-            {data?.tokens?.nodes?.map((nft: any, index: number) => (
-              <a
-                href={`https://opensea.io/assets/0x400b77c8b985bbfba6189580af3c6e4074e71ed5/${nft?.token?.tokenId}`}
-                key={index}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className={classes.nft}>
-                  <img
-                    src={nft?.token?.image?.mediaEncoding?.poster}
-                    className={classes.nftImage}
-                    alt={nft?.token?.name}
-                  />
-                  <div className={classes.tokenInfo}>
-                    <h2>{nft?.token?.name}</h2>
-                  </div>
-                  {nft?.token?.metadata?.attributes && nft?.token?.metadata?.attributes.length > 0 && (
-                    <ul className={classes.nftList}>
-                      <li>
+            {data?.tokens?.nodes?.map(
+              (nft: any, index: number) =>
+                nft && (
+                  <a
+                    href={`https://opensea.io/assets/0x400b77c8b985bbfba6189580af3c6e4074e71ed5/${nft?.token?.tokenId}`}
+                    key={index}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className={classes.nft}>
+                      {nft?.token?.image?.mediaEncoding?.poster ? (
                         <img
-                          className={classes.nftIcon}
-                          src={
-                            `/static/icons/Cloud/` +
-                            `${nft?.token?.metadata?.attributes[4].value}`.toUpperCase() +
-                            '.png'
-                          }
-                          alt={nft?.token?.metadata?.attributes[4].value}
+                          src={nft?.token?.image?.mediaEncoding?.poster}
+                          className={classes.nftImage}
+                          alt={nft?.token?.name}
                         />
-                      </li>
-                      <li>
+                      ) : (
                         <img
-                          className={classes.nftIcon}
-                          src={
-                            `/static/icons/Weather/` +
-                            `${nft?.token?.metadata?.attributes[5].value}`.toUpperCase() +
-                            '.png'
-                          }
-                          alt={nft?.token?.metadata?.attributes[5].value}
+                          src="/static/images/placeholder-gallery.jpg"
+                          className={classes.nftImage}
+                          alt={nft?.token?.name}
                         />
-                      </li>
-                      <li>
-                        <img
-                          className={classes.nftIcon}
-                          src={
-                            `/static/icons/Season/` +
-                            `${nft?.token?.metadata?.attributes[6].value}`.toUpperCase() +
-                            '.png'
-                          }
-                          alt={nft?.token?.metadata?.attributes[6].value}
-                        />
-                      </li>
-                      <li>
-                        <img
-                          className={classes.nftIcon}
-                          src={
-                            `/static/icons/Silhouette/` +
-                            `${nft?.token?.metadata?.attributes[7].value}`.toUpperCase() +
-                            '.png'
-                          }
-                          alt={nft?.token?.metadata?.attributes[7].value}
-                        />
-                      </li>
-                      {nft?.token?.metadata?.attributes[8].value.length > 0 && (
-                        <li>
-                          <img
-                            className={classes.nftIcon}
-                            src={`/static/icons/Object/OBJECT_1.png`}
-                            alt={nft?.token?.metadata?.attributes[8].value}
-                          />
-                        </li>
                       )}
-                      {nft?.token?.metadata?.attributes[9].value.length > 0 && (
-                        <li>
-                          <img
-                            className={classes.nftIcon}
-                            src={`/static/icons/Object/OBJECT_2.png`}
-                            alt={nft?.token?.metadata?.attributes[9].value}
-                          />
-                        </li>
+                      {nft?.token?.name && (
+                        <div className={classes.tokenInfo}>
+                          <h2>{nft?.token?.name}</h2>
+                        </div>
                       )}
-                    </ul>
-                  )}
-                </div>
-              </a>
-            ))}
+                      {nft?.token?.metadata?.attributes &&
+                        nft?.token?.metadata?.attributes.length > 0 && (
+                          <ul className={classes.nftList}>
+                            <li>
+                              <img
+                                className={classes.nftIcon}
+                                src={
+                                  `/static/icons/Cloud/` +
+                                  `${nft?.token?.metadata?.attributes[4].value}`.toUpperCase() +
+                                  '.png'
+                                }
+                                alt={nft?.token?.metadata?.attributes[4].value}
+                              />
+                            </li>
+                            <li>
+                              <img
+                                className={classes.nftIcon}
+                                src={
+                                  `/static/icons/Weather/` +
+                                  `${nft?.token?.metadata?.attributes[5].value}`.toUpperCase() +
+                                  '.png'
+                                }
+                                alt={nft?.token?.metadata?.attributes[5].value}
+                              />
+                            </li>
+                            <li>
+                              <img
+                                className={classes.nftIcon}
+                                src={
+                                  `/static/icons/Season/` +
+                                  `${nft?.token?.metadata?.attributes[6].value}`.toUpperCase() +
+                                  '.png'
+                                }
+                                alt={nft?.token?.metadata?.attributes[6].value}
+                              />
+                            </li>
+                            <li>
+                              <img
+                                className={classes.nftIcon}
+                                src={
+                                  `/static/icons/Silhouette/` +
+                                  `${nft?.token?.metadata?.attributes[7].value}`.toUpperCase() +
+                                  '.png'
+                                }
+                                alt={nft?.token?.metadata?.attributes[7].value}
+                              />
+                            </li>
+                            {nft?.token?.metadata?.attributes[8].value.length > 0 && (
+                              <li>
+                                <img
+                                  className={classes.nftIcon}
+                                  src={`/static/icons/Object/OBJECT_1.png`}
+                                  alt={nft?.token?.metadata?.attributes[8].value}
+                                />
+                              </li>
+                            )}
+                            {nft?.token?.metadata?.attributes[9].value.length > 0 && (
+                              <li>
+                                <img
+                                  className={classes.nftIcon}
+                                  src={`/static/icons/Object/OBJECT_2.png`}
+                                  alt={nft?.token?.metadata?.attributes[9].value}
+                                />
+                              </li>
+                            )}
+                          </ul>
+                        )}
+                      {!nft?.token?.name && !nft?.token?.metadata?.attributes && (
+                        <div className={classes.placeholderMetadata} />
+                      )}
+                    </div>
+                  </a>
+                ),
+            )}
           </Slider>
           <div className={classes.navContainer}>
             <button onClick={() => prev()} className={classes.prev} disabled={slideIndex === 0}>

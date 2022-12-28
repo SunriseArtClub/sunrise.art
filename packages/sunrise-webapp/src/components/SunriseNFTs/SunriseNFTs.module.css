@@ -74,3 +74,22 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.placeholderMetadata {
+  height: calc(35px + 40px + 2px);
+}
+
+@media (max-width: 990px) {
+
+  .nftList {
+    gap: 0.15rem;
+  }
+  .nftIcon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .placeholderMetadata {
+    height: calc(35px + 28px + 2px);
+  }
+}
