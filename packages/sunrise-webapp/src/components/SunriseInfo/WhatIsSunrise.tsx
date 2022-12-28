@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import Accordian from '../Accordian';
 import { gql, useQuery } from '@apollo/client';
 import SunriseNFTs from '../SunriseNFTs';
-import { homedir } from 'os';
 
 const WhatIsSunrise = () => {
   const HOME_QUERY = gql`
