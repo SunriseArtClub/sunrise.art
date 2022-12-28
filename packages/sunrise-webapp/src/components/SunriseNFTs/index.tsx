@@ -41,7 +41,7 @@ const SunriseNFTs = () => {
   `;
 
   const { loading, error, data, fetchMore } = useQuery(SUNRISE_FUND_QUERY, {
-    variables: { limit: 8 },
+    variables: { limit: 16 },
     context: { clientName: 'zora' },
   });
 
