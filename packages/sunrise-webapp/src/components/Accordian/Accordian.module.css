@@ -24,7 +24,7 @@
     height: calc(100% - 10px);
     max-height: 18px;
     background-color: var(--brand-white);
-    transition: transform 450ms ease-in-out;
+    transition: transform 0.2s ease-in-out;
   
     transform: translateY(-50%);
   }
@@ -46,7 +46,7 @@
   .content {
     max-height: 0;
     overflow: hidden;
-    transition: all 400ms ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-transform: none;
     padding: 0 1rem;
     line-height: 1.25;
@@ -121,7 +121,6 @@
     font-weight: 600;
     font-size: 1.5rem;
     padding: 0 1rem;
-    text-transform: uppercase;
     position: relative;
     line-height: 1;
   }

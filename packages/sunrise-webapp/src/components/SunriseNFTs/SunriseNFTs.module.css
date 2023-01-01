@@ -1,0 +1,95 @@
+.slick-track {
+  text-align: center;
+  margin-top: 5rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.gallery {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+a div {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.nftImage {
+  border: 3px solid #fff;
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+.nftList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nftIcon {
+  height: 40px;
+  width: 40px;
+}
+
+.gallery h2 {
+  font-size: 1.25rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.gallery {
+  margin-top: 1.5rem;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.next,
+.prev {
+  border-radius: 9999px;
+  background-color: #FFFFFF40;
+  border: 3px solid #fff;
+  color: #fff;
+  padding: 0.25rem 1.5rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.placeholderMetadata {
+  height: calc(35px + 40px + 2px);
+}
+
+@media (max-width: 990px) {
+
+  .nftList {
+    gap: 0.15rem;
+  }
+  .nftIcon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .placeholderMetadata {
+    height: calc(35px + 28px + 2px);
+  }
+}
